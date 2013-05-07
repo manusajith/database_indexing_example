@@ -14,6 +14,6 @@ class HomeController < ApplicationController
 
   def search_result
     query = params[:users][:first_name]
-    @user = User.where("first_name LIKE ?",query).first
+    @user = User.where("first_name = ?",query).first
   end
 end
