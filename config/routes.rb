@@ -1,5 +1,6 @@
 DatabaseIndexingExample::Application.routes.draw do
   get "home/index"
+  post "/" => 'home#index'
   get '/contact' => 'home#contact', as: :contact
   get '/search' => 'home#search', as: :search
   post '/search_results' => 'home#search_result', as: :search_results
