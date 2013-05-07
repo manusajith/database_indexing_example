@@ -27,7 +27,7 @@ FactoryGirl.define do
 end
 
 namespace :user do
-  desc "Add a admin user."
+  desc "Seed the database with 10,000 users"
   task :create => :environment do
     FactoryGirl.create_list(:user, 10000)
   end
