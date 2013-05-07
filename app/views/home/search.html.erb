@@ -1,0 +1,11 @@
+<div style="height:500px">
+  <%= form_for "users", url:{action:'search_result'} do |f| -%>
+    <div>
+      <%= f.label :first_name, "Search Users by First Name" %>
+      <%= f.text_field :first_name, placeholder:"Eg : Manu" %>
+    </div>
+    <div>
+      <%= f.submit "Search", :disable_with => 'Searching...' %>
+    </div>
+  <% end -%>
+</div>
