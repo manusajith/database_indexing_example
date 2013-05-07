@@ -1,4 +1,6 @@
 class HomeController < ApplicationController
+  before_filter :authenticate_user!, only:[:search,:search_result]
+
   def index
     redirect_to search_path if user_signed_in?
   end
